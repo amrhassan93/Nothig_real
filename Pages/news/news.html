@@ -7,13 +7,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/Pages/news/css/news.css">
+    <link rel="stylesheet" href="css/news.css">
     <title>NewsFeed</title>
 </head>
 
 <body class="bg-dark">
-    <!-- ======================================= Navbar =======================================-->
-
     <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
@@ -43,62 +41,32 @@
             </div>
         </div>
     </nav>
-    <!-- Nav bar 
-    <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
-        <a class="navbar-brand" href="#"><img src="" alt="logo" style="width:40px;"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">Profile</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">Login</a>
-                </li>     
-          </ul>
-        </div>
-    </nav>-->
+
     </nav>
 
-    <div class="container" style="margin-top:70px">
+    <div id="con" class="container-fluid" style="margin-top:70px">
         <div class="row">
-            <div class="col-sm-4 bg-light card" style="margin-right:5px">
-                <h3>Some Links</h3>
-                <ul class="nav nav-pills flex-column ">
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info text-white " href="#">Active</a>
-                    </li>
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info text-white" href="#">Link</a>
-                    </li>
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info text-white" href="#">Link</a>
-                    </li>
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info disabled text-white" href="#">Log out</a>
-                    </li>
-                </ul>
-                <hr class="d-sm-none">
-            </div>
-
-            <div class="col-sm-7 bg-light card">
+            <div id="ad1" class="col-md-2 bg-light mx-2 card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sed necessitatibus nemo inventore iste voluptatem dolorem, quo unde quae nisi? Vel ratione laboriosam iure in odio veniam ad culpa quod.</div>
+            <div class="col-md-7 bg-light card">
                 <h2>Explore</h2>
                 <h4>Post</h4>
-                <div class="card" style="width: 600px; height: 120px;">
-                    <div class="form-group" style="margin-top: 20px;">
+                <div class="card">
+                    <div class="form-group p-2 m-2" style="margin-top: 20px;">
                         <input type="text" class="form-control" id="post" placeholder="Status: Fake News" name="post">
                         <button type="submit" class="btn btn-info" style="margin-top: 10px;">Post</button>
                     </div>
                 </div>
+
+                <section id="news">
+                    <div class="container">
+                        <div class="recent">
+                            <h3>News</h3>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+                        </div>
+                    </div>
+                </section>
             </div>
+            <div id="ad2" class="col-md-2 bg-light mx-2 card"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sed necessitatibus nemo inventore iste voluptatem dolorem, quo unde quae nisi? Vel ratione laboriosam iure in odio veniam ad culpa quod.</div>
         </div>
     </div>
 
