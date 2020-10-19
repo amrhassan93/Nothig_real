@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAA;EACL,cAAc,EAAE,GAAG;CACtB",
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACN,cAAc,EAAE,GAAG;CACtB;;AAED,AAAA,GAAG,CAAC;EACA,gBAAgB,EAAE,kBAAkB;CACvC",
     "sources": [
         "news.scss"
     ],
