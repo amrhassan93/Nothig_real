@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
 
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="js/jquery-3.4.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
@@ -16,7 +17,7 @@
 <body>
     <!-- ======================================= Navbar =======================================-->
 
-    <nav class="navbar navbar-expand-sm navbar-dark bg-dark fixed-top">
+    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
@@ -40,7 +41,7 @@
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
                     <input class="form-control mr-sm-2" type="text" placeholder="Search">
-                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
                 </form>
             </div>
         </div>
@@ -50,9 +51,20 @@
 
     <header>
         <h1>Nothing Is Real</h1>
+        <h2 id="ityped" class="ityped"></h2>
     </header>
+    <!-- ======================================= Top Rated =======================================-->
+    <section id="topRated">
+        <h2>Top Rated</h2>
+        <div class="container">
+            <div class="recent">
 
+            </div>
+        </div>
+    </section>
 
+    <script src="https://unpkg.com/ityped@1.0.2"></script>
+    <script src="js/ityped.js"></script>
     <script src="js/home.js"></script>
 </body>
 
