@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,68 +7,69 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <link rel="stylesheet" href="/Pages/news/css/news.css">
+    <link rel="stylesheet" href="css/news.css">
     <title>NewsFeed</title>
 </head>
-<body class="bg-dark">
-    <!-- Nav bar 
-    <nav class="navbar navbar-expand-sm bg-info navbar-dark fixed-top">
-        <a class="navbar-brand" href="#"><img src="" alt="logo" style="width:40px;"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavbar">
-            <ul class="nav nav-pills">
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">Profile</a>
-                </li> 
-                <li class="nav-item">
-                    <a class="nav-link text-dark" data-toggle="pill" href="#">Login</a>
-                </li>     
-          </ul>
-        </div>
-    </nav>-->
-    </nav>
 
-    <div class="container" style="margin-top:70px">
-        <div class="row">
-            <div class="col-sm-4 bg-light card" style="margin-right:5px">
-                <h3>Some Links</h3>
-                <ul class="nav nav-pills flex-column ">
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info text-white " href="#">Active</a>
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                     </li>
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info text-white" href="#">Link</a>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pages/news/news.html">Link</a>
                     </li>
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info text-white" href="#">Link</a>
-                    </li>
-                    <li class="nav-item" id="sidelink">
-                        <a class="nav-link bg-info disabled text-white" href="#">Log out</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                        </div>
                     </li>
                 </ul>
-                <hr class="d-sm-none">
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
             </div>
+        </div>
+    </nav>
 
-            <div class="col-sm-7 bg-light card">
+    </nav>
+
+    <div id="con" class="container-fluid" style="margin-top:70px">
+        <div class="row">
+            <div id="ad1" class="col-md-2 bg-light mx-2 card">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sed necessitatibus nemo inventore iste voluptatem dolorem, quo unde quae nisi? Vel ratione laboriosam iure in odio veniam ad culpa quod.</div>
+            <div class="col-md-7 bg-light card">
                 <h2>Explore</h2>
                 <h4>Post</h4>
-                    <div class="card" style="width: 600px; height: 120px;">
-                        <div class="form-group" style="margin-top: 20px;">
-                            <input type="text" class="form-control" id="post" placeholder="Status: Fake News" name="post"> 
-                            <button type="submit" class="btn btn-info" style="margin-top: 10px;">Post</button> 
+                <div class="card">
+                    <div class="form-group p-2 m-2" style="margin-top: 20px;">
+                        <input type="text" class="form-control" id="post" placeholder="Status: Fake News" name="post">
+                        <button type="submit" class="btn btn-info" style="margin-top: 10px;">Post</button>
+                    </div>
+                </div>
+
+                <section id="news">
+                    <div class="container">
+                        <div class="recent">
+                            <h3>News</h3>
+                            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
                         </div>
                     </div>
+                </section>
             </div>
+            <div id="ad2" class="col-md-2 bg-light mx-2 card"> Lorem, ipsum dolor sit amet consectetur adipisicing elit. Libero sed necessitatibus nemo inventore iste voluptatem dolorem, quo unde quae nisi? Vel ratione laboriosam iure in odio veniam ad culpa quod.</div>
         </div>
     </div>
 
 </body>
+
 </html>
