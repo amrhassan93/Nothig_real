@@ -5,7 +5,7 @@ nav {
 header {
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -20,13 +20,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   font-family: "Lobster", cursive;
-}
-
-header h1 {
-  color: #fff;
-}
-
-header h2 {
   color: #fff;
 }
 
@@ -55,6 +48,7 @@ header .ityped-cursor {
   min-height: 100vh;
   background-color: #EFEFEF;
   padding: 25px;
+  font-family: "Lobster", cursive;
 }
 
 #topRated h2 {
@@ -70,5 +64,41 @@ header .ityped-cursor {
   background-color: #fff;
   -webkit-box-shadow: 0px 0px 10px #31A2B7;
           box-shadow: 0px 0px 10px #31A2B7;
+}
+
+#contact {
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  font-family: "Lobster", cursive;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+}
+
+.copy {
+  background-color: #000;
+  text-align: center;
+  color: #fff;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  border: solid 3px #31A2B7;
+}
+
+.copy a {
+  color: #fff;
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */

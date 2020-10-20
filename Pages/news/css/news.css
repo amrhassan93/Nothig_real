@@ -1,5 +1,5 @@
 nav {
-    background-color: #31A2B7 !important;
+  background-color: #31A2B7 !important;
 }
 
 h1,
@@ -8,26 +8,24 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Lobster", cursive;
+  font-family: "Lobster", cursive;
 }
 
 #news {
-    min-height: 100vh;
-    padding: 25px;
+  min-height: 100vh;
+  padding: 25px;
 }
 
 #news h3 {
-    text-align: center;
-    margin: 20px;
+  text-align: center;
+  margin: 20px;
 }
 
 #news .recent {
-    height: 80vh;
-    max-height: 80vh;
-    overflow: auto;
-    -webkit-box-shadow: 0px 0px 10px #31A2B7;
-    box-shadow: 0px 0px 10px #31A2B7;
+  height: 80vh;
+  max-height: 80vh;
+  overflow: auto;
+  -webkit-box-shadow: 0px 0px 10px #31A2B7;
+          box-shadow: 0px 0px 10px #31A2B7;
 }
-
-
 /*# sourceMappingURL=news.css.map */
