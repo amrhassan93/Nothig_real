@@ -23,7 +23,7 @@
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="Pages/news/news.html">Link</a>
@@ -59,14 +59,14 @@
                     <h4>Post</h4>
                     <div class="card">
                         <div class="form-group p-2 m-2" style="margin-top: 20px;">
-                            <input type="text" class="form-control" id="post" placeholder="Set tittle" name="post">
-                            <textarea class="form-control" rows="5" id="postcontent"></textarea>
-                            <button type="submit" class="btn btn-info" style="margin-top: 10px;">Post</button>
+                            <input id="posttitle" type="text" class="form-control" id="post" placeholder="Set tittle" name="post">
+                            <textarea id="postbody" class="form-control" rows="5" id="postcontent"></textarea>
+                            <button id="postNow" type="submit" class="btn btn-info" style="margin-top: 10px;">Post</button>
                         </div>
                     </div>
                     <section id="news">
                         <div class="container">
-                            <div class="recent">
+                            <div id="recent" class="recent">
                                 <h3>News</h3>
                             </div>
                         </div>
@@ -80,6 +80,17 @@
 
         </div>
     </div>
+
+
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="js/news.js"></script>
 
 </body>
 

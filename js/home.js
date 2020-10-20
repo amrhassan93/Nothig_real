@@ -30,30 +30,22 @@ firebase.analytics();
 const rootRef = firebase.database().ref("issues/");
 rootRef.on("value",
 
-        (snapshot) => {
-            const listtablebody = document.getElementById("news");
-            listtablebody.textContent = "";
-            snapshot.forEach((child) => {
-                issue = child.val();
-                console.log(issue)
+    (snapshot) => {
+        const listtablebody = document.getElementById("news");
+        listtablebody.textContent = "";
+        snapshot.forEach((child) => {
+            issue = child.val();
+            console.log(issue)
 
 
-                var post = document.createElement("div")
-                post.innerHTML = "<h3>" + issue.PostTitle + "</h3> <h5>" + issue.postBody + "</h5>"
-                listtablebody.append(post)
-            })
+            var post = document.createElement("div")
+            post.innerHTML = "<h3>" + issue.PostTitle + "</h3> <h5>" + issue.postBody + "</h5>"
+            listtablebody.append(post)
+        })
 
-        }
-    )
-    // rootRef.push({
-    //     postBody: "Welcome Form my first firebase Post",
-    //     PostTitle: "Hello World"
-    // });
+    }
+)
 
-// rootRef.push({
-//     postBody: "Welcome Form my second firebase Post",
-//     PostTitle: "Hello again"
-// });
 
 //to send email from contact us
 // var inputs = document.getElementsByClassName('form-control')
