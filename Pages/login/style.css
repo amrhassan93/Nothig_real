@@ -1,0 +1,43 @@
+body{
+    background-color: black;
+    background-image: url(https://pic.i7lm.com/wp-content/uploads/2019/09/3-20-780x405.jpg);
+    background-size: cover;
+    margin:0;
+    padding: 0;
+    
+    
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    text-align: center;
+}
+.form{
+    width: 30%;
+background-color: darkslategray;
+
+     margin:20%  auto; 
+    padding: 20px;
+    display: inline-block;
+    text-align: left;
+    margin-top: 10%;
+    border-radius: 10px;
+}
+[type="submit"]{
+
+position: absolute;
+object-position: center;
+
+}
+#but{
+
+object-position: center;
+
+
+
+
+
+}
+
+
+
