@@ -54,3 +54,25 @@
 //     postBody: "Welcome Form my second firebase Post",
 //     PostTitle: "Hello again"
 // });
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+var arrLang = {
+    "en": {
+        "HOME": "Home",
+        "NEWS": "News"
+    },
+    "ar": {
+        "HOME": "الرئيسيه",
+        "NEWS": "الاخبار"
+    }
+}
+$(function() {
+    $('.translate').click(function() {
+        var lang = $(this).attr('id')
+
+        $('.lang').each(function(index, element) {
+            $(this).text(arrLang[lang][$(this).attr('key')])
+        })
+    })
+
+})
