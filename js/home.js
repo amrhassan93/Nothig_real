@@ -39,7 +39,7 @@ rootRef.on("value",
 
 
             var post = document.createElement("div")
-            post.innerHTML = "<h3>" + issue.PostTitle + "</h3> <h5>" + issue.postBody + "</h5>"
+            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5>"
             listtablebody.append(post)
         })
 
