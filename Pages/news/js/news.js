@@ -17,9 +17,6 @@ postBtn.addEventListener('click', function() {
     }
 })
 
-
-
-
 // Empty Form Function
 function emptyForm() {
     postTitle.value = "";
@@ -112,17 +109,7 @@ function showprompt() {
 //     PostTitle: "Hello again"
 // });
 
-////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-var arrLang = {
-    "en": {
-        "HOME": "Home",
-        "NEWS": "News"
-    },
-    "ar": {
-        "HOME": "الرئيسيه",
-        "NEWS": "الاخبار"
-    }
-}
+// ------------------------------------------ Adding Multi language --------------------------------------------
 $(function() {
     $('.translate').click(function() {
         var lang = $(this).attr('id')
@@ -131,5 +118,4 @@ $(function() {
             $(this).text(arrLang[lang][$(this).attr('key')])
         })
     })
-
 })
