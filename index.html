@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css">
 
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
     <script src="js/jquery-3.4.1.min.js"></script>
@@ -21,21 +22,30 @@
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- ======================================= Multi lang Buttons =======================================-->
+            <!-- <button class="translate btn btn-info" id="en">English</button> -->
+            <!-- <button class="translate btn btn-info" id="ar">عربي</button> -->
+
+            <!-- ------------------------------------------------------------------------------------------------- -->
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link lang" key="HOME" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="Pages/news/news.html">Link</a>
+                        <a class="nav-link lang" key="NEWS" href="Pages/news/news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lang" key="PROFILE" href="Pages/news/news.html">Profile</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join Us</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item" href="#">Action 1</a>
-                            <a class="dropdown-item" href="#">Action 2</a>
+                            <a class="dropdown-item lang" key="" href="Pages/login/login.html">Login</a>
+                            <a class="dropdown-item" href="#">Sign Up</a>
+
                         </div>
                     </li>
                 </ul>
@@ -54,6 +64,47 @@
         <h2 id="ityped" class="ityped"></h2>
     </header>
 
+
+
+    <!-- ======================================= carousel =======================================-->
+    <div id="demo" class="carousel slide" data-ride="carousel">
+        <ul class="carousel-indicators">
+            <li data-target="#demo" data-slide-to="0" class="active"></li>
+            <li data-target="#demo" data-slide-to="1"></li>
+            <li data-target="#demo" data-slide-to="2"></li>
+        </ul>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="assets/imgs/news1.jpeg" alt="social">
+                <!-- <div class="carousel-caption">
+                    <h3>SOCIAL MEDIA</h3>
+                    <p>We had such a great time together</p>
+                </div> -->
+            </div>
+            <div class="carousel-item">
+                <img src="assets/imgs/news2.jpeg" alt="Play">
+                <!-- <div class="carousel-caption">
+                    <h3>PLAY</h3>
+                    <p>Spend your Free time Playing with us</p>
+                </div> -->
+            </div>
+            <div class="carousel-item">
+                <img src="assets/imgs/news3.jpeg" alt="communication">
+                <!-- <div class="carousel-caption">
+                    <h3>Connection</h3>
+                    <p>We love Easy Comnnection</p>
+                </div> -->
+            </div>
+        </div>
+        <!-- carousel control -->
+        <a class="carousel-control-prev" href="#demo" data-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </a>
+        <a class="carousel-control-next " href="#demo" data-slide="next">
+            <span class="carousel-control-next-icon "></span>
+        </a>
+    </div>
+
     <!-- ======================================= Top Rated =======================================-->
 
     <section id="topRated">
@@ -68,47 +119,34 @@
         </div>
     </section>
 
-    <!-- ======================================= contact us =======================================-->
-
-    <section id="contact">
-        <h2 class="p-5">Keep in Touch</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="info">
-                        <div class="contactInfo">
-                            <p> Phone Number : 01141736576</p>
-                            <p>Adress : Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
-                            <p>Email : almniproject@gmail.com</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="contactUs">
-                        <form action="">
-                            <input type="text" class="form-control" name="username" placeholder="Enter Your Name" id="username">
-                            <p class="usernameAlert alert">Invalid User Name</p>
-                            <input type="Email" class="form-control" name="email" placeholder="Enter Your Email" id="email">
-                            <div class="emailAlert alert">Invalid Email</div>
-                            <input type="text" class="form-control" name="phone" placeholder="Enter Your Phone Number" id="number">
-                            <div class="phoneAlert alert">Invalid Mobile Number</div>
-                            <textarea class="form-control" placeholder="Enter Your Message" id="mailBody"></textarea>
-                            <div class="messageAlert alert">Invalid Message</div>
-                            <input type="button" onclick="sendNow()" value="Send Message" id="submit" class="button" disabled>
-                            <!-- <button value="Send Email" onclick="sendEmail()">Send Message</button> -->
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- ======================================= Footer =======================================-->
 
     <section id="footer">
-        <div class="copy">
-            <span>Copyright &copy; 2020 </span><a href="https://almni.netlify.app/pages/about/about" target="_blanck">&nbsp; Nothing Real</a>
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="followUs">
+                        <i class="fab fa-facebook-f "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-linkedin-in "></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="copy">
+                        <span>Copyright &copy; 2020 </span><a href="https://almni.netlify.app/pages/about/about" target="_blanck">&nbsp; Nothing Real</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="Pages/news/imgs/iconfinder_United_Kingdom_2361499.png" alt="en" class="translate" id="en">
+                    <img src="Pages/news/imgs/iconfinder_Egypt-Flag_32209.png" alt="egypt" class="translate" id="ar">
+                </div>
+            </div>
         </div>
+
+
+
+
     </section>
 
 
@@ -127,6 +165,7 @@
     <script src="https://unpkg.com/ityped@1.0.2"></script>
     <script src="js/ityped.js"></script>
     <script src="js/home.js"></script>
+    <script src="Pages/news/js/Multilang.js"></script>
 </body>
 
 </html>

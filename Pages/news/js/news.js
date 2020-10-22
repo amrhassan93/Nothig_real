@@ -57,7 +57,7 @@ rootRef.on("value",
 
 
             var post = document.createElement("div")
-            post.innerHTML = "<h3>" + issue.PostTitle + "</h3> <h5>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child.key + "\" )'  class='btn btn-info'>Edit</button> "
+            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child.key + "\" )'  class='btn btn-info'>Edit</button> "
             listtablebody.append(post)
         })
 
@@ -65,11 +65,12 @@ rootRef.on("value",
 )
 
 
-var editIssuekey;
 //edit Function
 
 
+// function showprompt() {
 
+// }
 
 function editpost(issueKey) {
 
@@ -90,9 +91,7 @@ function editpost(issueKey) {
     // alert('update Key ' + issueKey)
 }
 
-function showprompt() {
 
-}
 // var recordRef = firebase.database().ref("issues/" + issueKey);
 
 // recordRef.update({
@@ -111,11 +110,10 @@ function showprompt() {
 
 // ------------------------------------------ Adding Multi language --------------------------------------------
 $(function() {
-    $('.translate').click(function() {
-        var lang = $(this).attr('id')
 
-        $('.lang').each(function(index, element) {
-            $(this).text(arrLang[lang][$(this).attr('key')])
-        })
-    })
+
+
+
+
+
 })
