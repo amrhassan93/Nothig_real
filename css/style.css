@@ -4,7 +4,8 @@ nav {
 
 header {
   width: 100%;
-  height: 100vh;
+  margin-top: 60px;
+  height: 100px;
   background-color: #000;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -44,6 +45,16 @@ header .ityped-cursor {
   }
 }
 
+/* Make image of carousel full */
+.carousel-inner {
+  margin-top: 10px;
+}
+
+.carousel-inner img {
+  width: 100%;
+  height: 80VH;
+}
+
 #topRated {
   min-height: 100vh;
   background-color: #EFEFEF;
@@ -76,30 +87,45 @@ header .ityped-cursor {
   text-align: center;
 }
 
-.copy {
+#footer {
   background-color: #000;
-  text-align: center;
+  min-height: 60px;
   color: #fff;
-  height: 70px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border: solid 3px #31A2B7;
+  text-align: center;
 }
 
-.copy a {
+#footer .followUs i {
+  padding: 5px;
+  margin: 5px;
+  -webkit-transition: all;
+  transition: all;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  margin-top: 12px;
+  font-size: 20px;
+}
+
+#footer .followUs i:hover {
+  color: #31A2B7;
+}
+
+#footer .copy {
+  margin-top: 12px;
+}
+
+#footer a {
   color: #fff;
   text-decoration: none;
+}
+
+#footer #ar,
+#footer #en {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  padding: 5px;
+  margin-left: 10px;
+  cursor: pointer;
 }
 
 #news div {

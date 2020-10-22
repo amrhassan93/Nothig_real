@@ -1,6 +1,18 @@
 @import '../../../css/variables.scss';
 nav {
     background-color: #31A2B7 !important;
+    #ar,
+    #en {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 5px;
+        cursor: pointer;
+        // background-color: #09c;
+    }
+    .dropdown-menu {
+        text-align: center;
+    }
 }
 
 h1,
@@ -24,5 +36,52 @@ h6 {
         max-height: 80vh;
         overflow: auto;
         box-shadow: 0px 0px 10px #31A2B7;
+    }
+}
+
+#recent div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 1px solid #31A2B7;
+    margin: 15px;
+    border-radius: 10px;
+    h3 {
+        text-align: center;
+        text-shadow: 0px 0px 20px #31A2B7;
+    }
+}
+
+#footer {
+    background-color: #000;
+    min-height: 60px;
+    color: #fff;
+    text-align: center;
+    .followUs i {
+        padding: 5px;
+        margin: 5px;
+        transition: all;
+        transition-duration: .25s;
+        margin-top: 12px;
+        font-size: 20px;
+    }
+    .followUs i:hover {
+        color: #31A2B7;
+    }
+    .copy {
+        margin-top: 12px;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #ar,
+    #en {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        // background-color: #09c;
     }
 }

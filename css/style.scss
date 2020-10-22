@@ -5,7 +5,8 @@ nav {
 
 header {
     width: 100%;
-    height: 100vh;
+    margin-top: 60px;
+    height: 100px;
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -42,6 +43,17 @@ header {
     }
 }
 
+
+/* Make image of carousel full */
+
+.carousel-inner {
+    margin-top: 10px;
+    img {
+        width: 100%;
+        height: 80VH;
+    }
+}
+
 #topRated {
     min-height: 100vh;
     background-color: #EFEFEF;
@@ -71,23 +83,61 @@ header {
     text-align: center;
 }
 
-.copy {
+// #contact .followUs {
+//     padding: 30px;
+//     border-left: solid 1px #000;
+// }
+#footer {
     background-color: #000;
+    min-height: 60px;
+    color: #fff;
     text-align: center;
-    color: #fff;
-    height: 70px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    border: solid 3px #31A2B7;
+    .followUs i {
+        padding: 5px;
+        margin: 5px;
+        transition: all;
+        transition-duration: .25s;
+        margin-top: 12px;
+        font-size: 20px;
+    }
+    .followUs i:hover {
+        color: #31A2B7;
+    }
+    .copy {
+        margin-top: 12px;
+    }
+    a {
+        color: #fff;
+        text-decoration: none;
+    }
+    #ar,
+    #en {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        padding: 5px;
+        margin-left: 10px;
+        cursor: pointer;
+        // background-color: #09c;
+    }
 }
 
-.copy a {
-    color: #fff;
-    text-decoration: none;
-}
-
+// .copy {
+//     overflow: hidden;
+//     background-color: #000;
+//     text-align: center;
+//     color: #fff;
+//     height: 70px;
+//     display: flex;
+//     flex-direction: row;
+//     align-items: center;
+//     justify-content: center;
+//     border: solid 3px #31A2B7;
+// }
+// .copy a {
+//     color: #fff;
+//     text-decoration: none;
+// }
 #news div {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding: 10px;

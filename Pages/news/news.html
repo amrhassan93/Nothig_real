@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../css/all.min.css">
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
@@ -21,8 +23,9 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <!-- ======================================= Multi lang Buttons =======================================-->
-            <button class="translate" id="en">English</button>
-            <button class="translate" id="ar">عربي</button>
+            <!-- <button class="translate btn btn-info" id="en">English</button> -->
+            <!-- <button class="translate btn btn-info" id="ar">عربي</button> -->
+
             <!-- ------------------------------------------------------------------------------------------------- -->
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
@@ -30,12 +33,12 @@
                         <a class="nav-link lang" key="HOME" href="../../index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link lang" key="NEWS" href="Pages/news/news.html">News</a>
+                        <a class="nav-link lang" key="NEWS" href="news.html">News</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Language</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item lang" key="7mbozo" href="#">Action 1</a>
+                            <a class="dropdown-item lang" key="" href="#">Action 1</a>
                             <a class="dropdown-item" href="#">Action 2</a>
                         </div>
                     </li>
@@ -71,7 +74,7 @@
                     <section id="news">
                         <div class="container">
                             <div id="recent" class="recent">
-                                <h3>News</h3>
+
                             </div>
                         </div>
                     </section>
@@ -85,6 +88,30 @@
         </div>
     </div>
 
+    <!-- ======================================= Footer =======================================-->
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="followUs">
+                        <i class="fab fa-facebook-f "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-linkedin-in "></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="copy">
+                        <span>Copyright &copy; 2020 </span><a href="https://almni.netlify.app/pages/about/about" target="_blanck">&nbsp; Nothing Real</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="imgs/iconfinder_United_Kingdom_2361499.png" alt="en" class="translate" id="en">
+                    <img src="imgs/iconfinder_Egypt-Flag_32209.png" alt="egypt" class="translate" id="ar">
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- The core Firebase JS SDK is always required and must be listed first -->
