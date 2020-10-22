@@ -3,15 +3,13 @@ var arrLang = {
         "HOME": "Home",
         "NEWS": "News",
         "POST": "Post",
-        "EXPLORE": "Explore",
-        "7mbozo": "7mbozo"
+        "EXPLORE": "Explore"
 
     },
     "ar": {
         "HOME": "الرئيسيه",
         "NEWS": "الاخبار",
         "POST": "نشر",
-        "EXPLORE": "استكشف",
-        "7mbozo": "حمبوزو"
+        "EXPLORE": "استكشف"
     }
 }
