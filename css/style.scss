@@ -87,3 +87,15 @@ header {
     color: #fff;
     text-decoration: none;
 }
+
+#news div {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 1px solid #31A2B7;
+    margin: 15px;
+    border-radius: 10px;
+    h3 {
+        text-align: center;
+        text-shadow: 0px 0px 20px #31A2B7;
+    }
+}
