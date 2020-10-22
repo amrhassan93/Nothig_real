@@ -1,58 +1,112 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bootstrap Demo</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="profile.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 </head>
+
 <body>
+    <!-- ======================================= Navbar =======================================-->
 
-  <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center">
-    <h3 class="text-center">My Profile</h3>
-  </nav>
-  <br><br><br><br>
+    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <!-- ======================================= Multi lang Buttons =======================================-->
+            <!-- <button class="translate btn btn-info" id="en">English</button> -->
+            <!-- <button class="translate btn btn-info" id="ar">عربي</button> -->
 
-        
-            <div class="container">          
-                     <div class="row">
-                    <div class="col"> <div class="card" style="width:400px; height:300px;">
-                      <img class="card-img-top" src="https://1.bp.blogspot.com/-K5dpZSgpiY0/WmSStvrtIXI/AAAAAAABOs8/dJV0sVYAqZ8G1oqn60E24YLMCHSYemmpgCLcBGAs/s400/26c84676ec11d1748fcfee2994b5eb7e--popular-mens-hairstyles-mens-hairstyle-.jpg" alt="Card image">
-                      <div class="card-body">
+            <!-- ------------------------------------------------------------------------------------------------- -->
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link lang" key="HOME" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lang" key="NEWS" href="Pages/news/news.html">News</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link lang" key="PROFILE" href="Pages/profie/profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join Us</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item lang" key="" href="Pages/login/login.html">Login</a>
+                            <a class="dropdown-item" href="Pages/login/register.html">Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- ======================================= profile =======================================-->
+
+    <!-- <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center">
+        <h3 class="text-center">My Profile</h3>
+    </nav> -->
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="card" style="width:400px; height:300px;">
+                    <img class="card-img-top img-fluid" src="https://1.bp.blogspot.com/-K5dpZSgpiY0/WmSStvrtIXI/AAAAAAABOs8/dJV0sVYAqZ8G1oqn60E24YLMCHSYemmpgCLcBGAs/s400/26c84676ec11d1748fcfee2994b5eb7e--popular-mens-hairstyles-mens-hairstyle-.jpg" alt="Card image">
+                    <div class="card-body">
                         <h4 class="card-title">John Doe</h4>
-                        <p class="card-text">I am a aprogramer in multi national company in Egypt  </p>
+                        <p class="card-text">I am a aprogramer in multi national company in Egypt </p>
                         <a href="#" class="btn btn-primary">See Profile</a>
-                      </div>
                     </div>
-
-  
-  
-                   
-  
-                  </div>
-                  </div>
                 </div>
-              </div>
-                     
-                       
+            </div>
+        </div>
+    </div>
 
-                 
+    <!-- ======================================= Footer =======================================-->
+
+    <section id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="followUs">
+                        <i class="fab fa-facebook-f "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-linkedin-in "></i>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="copy">
+                        <span>Copyright &copy; 2020 </span><a href="https://almni.netlify.app/pages/about/about" target="_blanck">&nbsp; Nothing Real</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="../../Pages/news/imgs/iconfinder_United_Kingdom_2361499.png" alt="en" class="translate" id="en">
+                    <img src="../../Pages/news/imgs/iconfinder_Egypt-Flag_32209.png" alt="egypt" class="translate" id="ar">
+                </div>
+            </div>
+        </div>
 
 
-               
 
 
-                
-                   
-    
-    
-                     
-    
-                  
-       
+    </section>
+
+
 </body>
+
 </html>
