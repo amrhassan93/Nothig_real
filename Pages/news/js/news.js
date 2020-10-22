@@ -57,7 +57,7 @@ rootRef.on("value",
 
 
             var post = document.createElement("div")
-            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child.key + "\" )'  class='btn btn-info'>Edit</button> "
+            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child + "\" )'  class='btn btn-info'>Edit</button> <button id='edit' onclick='deletepost(\"" + child.key + "\" )'  class='btn btn-danger'>Delete</button> "
             listtablebody.append(post)
         })
 
@@ -68,10 +68,22 @@ rootRef.on("value",
 //edit Function
 
 
-// function showprompt() {
-
+// function showprompt(issueKey) {
+//     var recordRef = firebase.database().ref("issues/" + issueKey.postBody);
+//     console.log(recordRef)
 // }
 
+// Delete Post
+function deletepost(issueKey) {
+    if (confirm("are You sure")) {
+        var recordRef = firebase.database().ref("issues/" + issueKey);
+    } else {
+        return
+    }
+
+    recordRef.remove()
+}
+// update
 function editpost(issueKey) {
 
     var newPostTitle = prompt("enter Post title")
