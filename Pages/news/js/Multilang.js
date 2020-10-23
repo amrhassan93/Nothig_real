@@ -23,13 +23,24 @@ var arrLang = {
         "HOME": "Home",
         "NEWS": "News",
         "POST": "Post",
-        "EXPLORE": "Explore"
-
+        "PROFILE": "Profile",
+        "JOINUS": "Join Us",
+        "LOGOUT": "Logout",
+        "LOGIN": "Login",
+        "SIGNUP": "Sign UP",
+        "EXPLORE": "Explore",
+        "COPYRIGHT": "Copyright 2020"
     },
     "ar": {
         "HOME": "الرئيسيه",
         "NEWS": "الاخبار",
         "POST": "نشر",
-        "EXPLORE": "استكشف"
+        "PROFILE": "الصفحه الشخصية",
+        "JOINUS": "انضم إلينا",
+        "LOGOUT": "خروج",
+        "LOGIN": "دخول",
+        "SIGNUP": "سجل",
+        "EXPLORE": "استكشف",
+        "COPYRIGHT": " جميع الحقوق محفوظه"
     }
 }
