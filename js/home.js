@@ -51,6 +51,7 @@ rootRef.on("value",
 var logout = document.getElementById('logout');
 
 logout.addEventListener('click', e => {
+    localStorage.removeItem("LOGGEDIN")
     firebase.auth().signOut();
 })
 
