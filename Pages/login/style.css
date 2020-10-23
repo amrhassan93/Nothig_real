@@ -1,3 +1,7 @@
+.hide {
+    display: none;
+}
+
 body {
     background-color: black;
     background-image: url(https://pic.i7lm.com/wp-content/uploads/2019/09/3-20-780x405.jpg);

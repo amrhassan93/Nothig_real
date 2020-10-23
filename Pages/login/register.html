@@ -1,63 +1,114 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <link rel="stylesheet"  href="style.css"/>
+    <title>Register</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
 
 </head>
+
 <body>
+    <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Navbar</a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavId">
+                <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Pages/news/news.html">Link</a>
+                    </li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="" id="logout">Log Out</a>
+                    </li>
+                    <li class="nav-item dropdown" id="hidelogin">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
+                        <div class="dropdown-menu" aria-labelledby="dropdownId">
+                            <a class="dropdown-item lang" key="" href="login.html">Login</a>
+                            <a class="dropdown-item" href="register.html">Sign Up</a>
+                        </div>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="text" placeholder="Search">
+                    <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
     <div class="row">
         <div class="col-sm-12">.col-sm-12</div>
         <div class="container">
             <div class="form">
-              <form action="/action_page.php">
-                  <div class="form-group">
-      
-              <input type="name"  class="form-control"  placeholder= " Name" id="Name">
-          
-                  </div>
-                  <br>
-                  <div class="form-group">
-                 
-                      <input type="email" class="form-control" placeholder="Email" id="email">
-                    </div>
-                    <br>
-                  <div class="form-group">
-                 
-                    <input type="password" class="form-control" placeholder="Password" id="password">
-                  </div>
-                  <br>
-                  <div class="form-group">
-                 
-                      <input type="password" class="form-control" placeholder="confirm password" id="confirm password">
+                <form>
+                    <div class="form-group">
+
+                        <input type="name" class="form-control" placeholder=" Name" id="Name">
+
                     </div>
                     <br>
                     <div class="form-group">
-                 
-                      <input type="number" class="form-control" placeholder="Mobile Number" id="mobile number">
+
+                        <input type="email" class="form-control" placeholder="Email" id="email">
                     </div>
-      
-                 <br>
-              <button type="button" class="btn btn-success btn-block"> Register </i></button>
-              <br>
-      
-        
-             
+                    <br>
+                    <div class="form-group">
+
+                        <input type="password" class="form-control" placeholder="Password" id="password">
+                    </div>
+                    <br>
+                    <div class="form-group">
+
+                        <input type="password" class="form-control" placeholder="confirm password" id="confirm password">
+                    </div>
+                    <br>
+                    <div class="form-group">
+
+                        <input type="number" class="form-control" placeholder="Mobile Number" id="mobileNumber">
+                    </div>
+
+                    <br>
+                    <button type="button" id="regbtn" class="btn btn-success btn-block"> Register </button>
+                    <br>
+
+
+
                 </form>
             </div>
-        
-   
-    <script src="js/login.js" ></script>
-    <script src="js/getdata.js"></script>
-    <script > 
+
+
+            <!-- <script src="js/login.js" ></script>
+    <script src="js/getdata.js"></script> -->
+            <!-- <script > 
                 
-    </script>
+    </script> -->
+
+            <!-- The core Firebase JS SDK is always required and must be listed first -->
+            <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+
+            <!-- TODO: Add SDKs for Firebase products that you want to use
+      https://firebase.google.com/docs/web/setup#available-libraries -->
+            <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+            <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+
+            <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
+            <script src="reg.js"></script>
+
+
 
 </body>
+
 </html>

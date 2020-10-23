@@ -1,11 +1,18 @@
 @import 'variables.scss';
+.hide {
+    display: none;
+}
+
 nav {
     background-color: #31A2B7 !important;
+    img {
+        height: 40px;
+    }
 }
 
 header {
     width: 100%;
-    margin-top: 60px;
+    margin-top: 70px;
     height: 100px;
     background-color: #000;
     display: flex;

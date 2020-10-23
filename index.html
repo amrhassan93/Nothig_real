@@ -20,7 +20,7 @@
 
     <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Navbar</a>
+            <a class="navbar-brand" href="index.html"><img src="assets/imgs/logo-bg.png" alt="logo"></a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -40,7 +40,10 @@
                     <li class="nav-item">
                         <a class="nav-link lang" key="PROFILE" href="Pages/profie/profile.html">Profile</a>
                     </li>
-                    <li class="nav-item dropdown">
+                    <li class="nav-item">
+                        <a class="nav-link" href="" id="logout">Log Out</a>
+                    </li>
+                    <li class="nav-item dropdown" id="hidelogin">
                         <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join Us</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item lang" key="" href="Pages/login/login.html">Login</a>
@@ -160,6 +163,8 @@
  https://firebase.google.com/docs/web/setup#available-libraries -->
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
     <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+
 
     <script src="https://unpkg.com/ityped@1.0.2"></script>
     <script src="js/ityped.js"></script>

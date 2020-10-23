@@ -3,6 +3,27 @@ var postTitle = document.getElementById("posttitle")
 var postBody = document.getElementById("postbody")
     // var editbtn = document.getElementById("edit")
 
+
+
+
+// FireBase Config
+var firebaseConfig = {
+    apiKey: "AIzaSyDE8wIHtR3kBY77emV6ktQHl1Mz9WQMN-k",
+    authDomain: "nothing-real.firebaseapp.com",
+    databaseURL: "https://nothing-real.firebaseio.com",
+    projectId: "nothing-real",
+    storageBucket: "nothing-real.appspot.com",
+    messagingSenderId: "655794930116",
+    appId: "1:655794930116:web:a6d7a1dfd85052a92be491",
+    measurementId: "G-9NLPPBLQWL"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+
+
+
 //Post Function
 postBtn.addEventListener('click', function() {
 
@@ -23,21 +44,29 @@ function emptyForm() {
     postBody.value = "";
 }
 
-// FireBase Config
-var firebaseConfig = {
-    apiKey: "AIzaSyDE8wIHtR3kBY77emV6ktQHl1Mz9WQMN-k",
-    authDomain: "nothing-real.firebaseapp.com",
-    databaseURL: "https://nothing-real.firebaseio.com",
-    projectId: "nothing-real",
-    storageBucket: "nothing-real.appspot.com",
-    messagingSenderId: "655794930116",
-    appId: "1:655794930116:web:a6d7a1dfd85052a92be491",
-    measurementId: "G-9NLPPBLQWL"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// log out
 
+var logout = document.getElementById('logout');
+
+logout.addEventListener('click', e => {
+    firebase.auth().signOut();
+})
+
+// watch any change of auth
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+        console.log(firebaseUser);
+        logout.classList.remove('hide')
+        hidelogin.classList.add('hide')
+
+    } else {
+        console.log(" NOt Logged in")
+        logout.classList.add('hide');
+        hidelogin.classList.remove('hide')
+
+    }
+});
 
 // var test = document.getElementById("test")
 // rootRef.on('value', snap => test.innerText = snap.val());
@@ -57,7 +86,7 @@ rootRef.on("value",
 
 
             var post = document.createElement("div")
-            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child.key + "\" )'  class='btn btn-info'>Edit</button> "
+            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child + "\" )'  class='btn btn-info'>Edit</button> <button id='edit' onclick='deletepost(\"" + child.key + "\" )'  class='btn btn-danger'>Delete</button> "
             listtablebody.append(post)
         })
 
@@ -68,10 +97,22 @@ rootRef.on("value",
 //edit Function
 
 
-// function showprompt() {
-
+// function showprompt(issueKey) {
+//     var recordRef = firebase.database().ref("issues/" + issueKey.postBody);
+//     console.log(recordRef)
 // }
 
+// Delete Post
+function deletepost(issueKey) {
+    if (confirm("are You sure")) {
+        var recordRef = firebase.database().ref("issues/" + issueKey);
+    } else {
+        return
+    }
+
+    recordRef.remove()
+}
+// update
 function editpost(issueKey) {
 
     var newPostTitle = prompt("enter Post title")
