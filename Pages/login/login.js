@@ -72,6 +72,7 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
         logout.classList.remove('hide')
         hidelogin.classList.add('hide');
         window.location.replace("https://nothing-real.netlify.app/index.html");
+
     } else {
         console.log(" NOt Logged in")
         logout.classList.add('hide');

@@ -29,7 +29,10 @@ var arrLang = {
         "LOGIN": "Login",
         "SIGNUP": "Sign UP",
         "EXPLORE": "Explore",
-        "COPYRIGHT": "Copyright 2020"
+        "COPYRIGHT": "Copyright 2020",
+        "NOTHING": "Nothing Is Real",
+        // "ROTATE": "['Welcome to Fake News', 'This is just for sarcasm']"
+        "RECENT": "Recent Posts",
     },
     "ar": {
         "HOME": "الرئيسيه",
@@ -41,6 +44,12 @@ var arrLang = {
         "LOGIN": "دخول",
         "SIGNUP": "سجل",
         "EXPLORE": "استكشف",
-        "COPYRIGHT": " جميع الحقوق محفوظه"
+        "COPYRIGHT": " جميع الحقوق محفوظه",
+        "NOTHING": "لا شيء حقيقي",
+        // "ROTATE": "['أهلاً في الاخبار المغلوطة', 'أهلاً لاستكشاف الحقيقة']"
+        "RECENT": "أخر الأخبار",
+
+
+
     }
 }
