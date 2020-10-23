@@ -3,6 +3,27 @@ var postTitle = document.getElementById("posttitle")
 var postBody = document.getElementById("postbody")
     // var editbtn = document.getElementById("edit")
 
+
+
+
+// FireBase Config
+var firebaseConfig = {
+    apiKey: "AIzaSyDE8wIHtR3kBY77emV6ktQHl1Mz9WQMN-k",
+    authDomain: "nothing-real.firebaseapp.com",
+    databaseURL: "https://nothing-real.firebaseio.com",
+    projectId: "nothing-real",
+    storageBucket: "nothing-real.appspot.com",
+    messagingSenderId: "655794930116",
+    appId: "1:655794930116:web:a6d7a1dfd85052a92be491",
+    measurementId: "G-9NLPPBLQWL"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+
+
+
 //Post Function
 postBtn.addEventListener('click', function() {
 
@@ -23,21 +44,29 @@ function emptyForm() {
     postBody.value = "";
 }
 
-// FireBase Config
-var firebaseConfig = {
-    apiKey: "AIzaSyDE8wIHtR3kBY77emV6ktQHl1Mz9WQMN-k",
-    authDomain: "nothing-real.firebaseapp.com",
-    databaseURL: "https://nothing-real.firebaseio.com",
-    projectId: "nothing-real",
-    storageBucket: "nothing-real.appspot.com",
-    messagingSenderId: "655794930116",
-    appId: "1:655794930116:web:a6d7a1dfd85052a92be491",
-    measurementId: "G-9NLPPBLQWL"
-};
-// Initialize Firebase
-firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// log out
 
+var logout = document.getElementById('logout');
+
+logout.addEventListener('click', e => {
+    firebase.auth().signOut();
+})
+
+// watch any change of auth
+
+firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+        console.log(firebaseUser);
+        logout.classList.remove('hide')
+        hidelogin.classList.add('hide')
+
+    } else {
+        console.log(" NOt Logged in")
+        logout.classList.add('hide');
+        hidelogin.classList.remove('hide')
+
+    }
+});
 
 // var test = document.getElementById("test")
 // rootRef.on('value', snap => test.innerText = snap.val());

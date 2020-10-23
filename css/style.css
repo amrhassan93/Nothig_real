@@ -1,3 +1,7 @@
+.hide {
+  display: none;
+}
+
 nav {
   background-color: #31A2B7 !important;
 }
