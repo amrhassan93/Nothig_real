@@ -153,16 +153,3 @@ updateBtn.addEventListener('click', function() {
 
 
 })
-
-
-
-
-// ------------------------------------------ Adding Multi language --------------------------------------------
-$(function() {
-
-
-
-
-
-
-})

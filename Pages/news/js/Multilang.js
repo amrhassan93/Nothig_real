@@ -1,3 +1,4 @@
+// change directions
 $(function() {
 
     var dir = localStorage.getItem('lang')
