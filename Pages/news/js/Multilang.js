@@ -1,11 +1,21 @@
 $(function() {
+
+    var dir = localStorage.getItem('lang')
+    console.log(dir)
+    if (dir == 'ar') {
+        $('body').attr("dir", 'rtl')
+    } else {
+        $('body').attr("dir", 'ltr');
+    }
     $('.translate').click(function() {
         // save, in your .translate click handler
         localStorage.setItem('lang', $(this).attr('id'));
         var lang = localStorage.getItem('lang') || 'en';
 
+
         $('.lang').each(function(index, element) {
             $(this).text(arrLang[lang][$(this).attr('key')])
+            location.reload();
         })
     })
 
@@ -13,6 +23,7 @@ $(function() {
 
     $('.lang').each(function(index, element) {
         $(this).text(arrLang[lang][$(this).attr('key')])
+
     })
 
 })
