@@ -31,6 +31,7 @@ var arrLang = {
         "EXPLORE": "Explore",
         "COPYRIGHT": "Copyright 2020",
         "NOTHING": "Nothing Is Real",
+        "SEARCH": "Search",
         // "ROTATE": "['Welcome to Fake News', 'This is just for sarcasm']"
         "RECENT": "Recent Posts",
     },
@@ -46,8 +47,10 @@ var arrLang = {
         "EXPLORE": "استكشف",
         "COPYRIGHT": " جميع الحقوق محفوظه",
         "NOTHING": "لا شيء حقيقي",
+        "SEARCH": "بحث",
         // "ROTATE": "['أهلاً في الاخبار المغلوطة', 'أهلاً لاستكشاف الحقيقة']"
         "RECENT": "أخر الأخبار",
+
 
 
 
