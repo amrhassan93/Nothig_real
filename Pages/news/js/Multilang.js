@@ -23,15 +23,24 @@ var arrLang = {
         "HOME": "Home",
         "NEWS": "News",
         "POST": "Post",
+        "PROFILE": "Profile",
+        "JOINUS": "Join Us",
+        "LOGOUT": "Logout",
+        "LOGIN": "Login",
+        "SIGNUP": "Sign UP",
         "EXPLORE": "Explore",
-        "7mbozo": "7mbozo"
-
+        "COPYRIGHT": "Copyright 2020"
     },
     "ar": {
         "HOME": "الرئيسيه",
         "NEWS": "الاخبار",
         "POST": "نشر",
+        "PROFILE": "الصفحه الشخصية",
+        "JOINUS": "انضم إلينا",
+        "LOGOUT": "خروج",
+        "LOGIN": "دخول",
+        "SIGNUP": "سجل",
         "EXPLORE": "استكشف",
-        "7mbozo": "حمبوزو"
+        "COPYRIGHT": " جميع الحقوق محفوظه"
     }
 }

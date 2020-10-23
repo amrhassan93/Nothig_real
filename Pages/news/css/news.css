@@ -2,6 +2,10 @@
   display: none;
 }
 
+nav img {
+  height: 40px;
+}
+
 nav {
   background-color: #31A2B7 !important;
 }
