@@ -23,19 +23,25 @@ firebase.analytics();
 
 
 
-
 //Post Function
 postBtn.addEventListener('click', function() {
-
-    if (postTitle.value != "" && postBody.value != "") {
-        rootRef.push({
-            PostTitle: postTitle.value,
-            postBody: postBody.value
-        });
-        emptyForm();
+    var userloggedin = localStorage.getItem("LOGGEDIN")
+    if (userloggedin) {
+        if (postTitle.value != "" && postBody.value != "") {
+            rootRef.push({
+                PostTitle: postTitle.value,
+                postBody: postBody.value
+            });
+            emptyForm();
+        } else {
+            alert("please Fill All requried Data")
+        }
     } else {
-        alert("please Fill All requried Data")
+        alert("You should login first")
+        window.location.href = "http://127.0.0.1:5500/Pages/login/register.html"
+
     }
+
 })
 
 // Empty Form Function

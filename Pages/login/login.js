@@ -66,6 +66,7 @@ logout.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
+        localStorage.setItem("LOGGEDIN", "You Are Logged In")
         logout.classList.remove('hide')
         hidelogin.classList.add('hide');
         window.location.replace("http://127.0.0.1:5500/index.html");
