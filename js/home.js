@@ -51,6 +51,7 @@ rootRef.on("value",
 var logout = document.getElementById('logout');
 
 logout.addEventListener('click', e => {
+    localStorage.removeItem("UserUID")
     localStorage.removeItem("LOGGEDIN")
     firebase.auth().signOut();
 })
@@ -60,6 +61,7 @@ logout.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
+        localStorage.setItem("UserUID", firebaseUser.uid)
         logout.classList.remove('hide')
         hidelogin.classList.add('hide')
 

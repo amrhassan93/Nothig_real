@@ -1,6 +1,7 @@
 // configure Fire base 
 
 var email = document.getElementById('email');
+var userName = document.getElementById('name');
 var password = document.getElementById('password');
 var mobileNumber = document.getElementById('mobileNumber')
 
@@ -32,6 +33,7 @@ firebase.analytics();
 
 // log out
 logout.addEventListener('click', e => {
+    localStorage.removeItem("UserUID")
     firebase.auth().signOut();
 })
 
@@ -51,7 +53,8 @@ regbtn.addEventListener('click', e => {
     rootRef.push({
         email: email.value,
         password: password.value,
-        mobileNumber: mobileNumber.value
+        mobileNumber: mobileNumber.value,
+        userName: userName.value
     });
 
     promise
@@ -65,6 +68,9 @@ regbtn.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
+        localStorage.setItem("UserUID", firebaseUser.uid);
+        localStorage.setItem("LOGGEDIN", "You Are Logged In")
+
         logout.classList.remove('hide')
         hidelogin.classList.add('hide');
         window.location.replace("http://127.0.0.1:5500/index.html");

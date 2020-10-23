@@ -41,6 +41,7 @@ login.addEventListener('click', function() {
 
 // log out
 logout.addEventListener('click', e => {
+    localStorage.removeItem("UserUID")
     firebase.auth().signOut();
 })
 
@@ -66,6 +67,7 @@ logout.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
+        localStorage.setItem("UserUID", firebaseUser.uid)
         localStorage.setItem("LOGGEDIN", "You Are Logged In")
         logout.classList.remove('hide')
         hidelogin.classList.add('hide');

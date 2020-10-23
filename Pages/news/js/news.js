@@ -1,10 +1,9 @@
 var postBtn = document.getElementById("postNow")
 var postTitle = document.getElementById("posttitle")
 var postBody = document.getElementById("postbody")
-    // var editbtn = document.getElementById("edit")
+var updateBtn = document.getElementById('updateBtn')
 
-
-
+var thisissueKey;
 
 // FireBase Config
 var firebaseConfig = {
@@ -21,14 +20,74 @@ var firebaseConfig = {
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
+// watch any change of auth
 
+firebase.auth().onAuthStateChanged(firebaseUser => {
+    if (firebaseUser) {
+        // console.log(firebaseUser);
+        localStorage.setItem("UserUID", firebaseUser.uid)
+        logout.classList.remove('hide')
+        hidelogin.classList.add('hide')
+
+    } else {
+        console.log(" NOt Logged in")
+        logout.classList.add('hide');
+        hidelogin.classList.remove('hide')
+
+    }
+});
+
+// Show Data From Firebase
+const rootRef = firebase.database().ref("issues/");
+
+rootRef.on("value",
+
+    (snapshot) => {
+
+        const listtablebody = document.getElementById("recent");
+        listtablebody.textContent = "";
+        snapshot.forEach((child) => {
+            issue = child.val();
+
+            // console.log(issue)
+            var userInfo = localStorage.getItem("UserUID")
+
+            if (userInfo == issue.userInfo) {
+                var post = document.createElement("div")
+                post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class=' editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class=' delbtn btn btn-danger'>Delete</button> "
+                listtablebody.append(post)
+
+            } else {
+                var post = document.createElement("div")
+                post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class='hide editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class='hide delbtn btn btn-danger'>Delete</button> "
+
+
+                listtablebody.append(post)
+            }
+        })
+    }
+)
+
+// log out
+
+var logout = document.getElementById('logout');
+
+logout.addEventListener('click', e => {
+    localStorage.removeItem("UserUID")
+    localStorage.removeItem("LOGGEDIN")
+    firebase.auth().signOut();
+})
 
 //Post Function
 postBtn.addEventListener('click', function() {
+
     var userloggedin = localStorage.getItem("LOGGEDIN")
+    var userInfo = localStorage.getItem("UserUID")
+        // console.log(userInfo)
     if (userloggedin) {
         if (postTitle.value != "" && postBody.value != "") {
             rootRef.push({
+                userInfo: userInfo,
                 PostTitle: postTitle.value,
                 postBody: postBody.value
             });
@@ -41,7 +100,6 @@ postBtn.addEventListener('click', function() {
         window.location.href = "http://127.0.0.1:5500/Pages/login/register.html"
 
     }
-
 })
 
 // Empty Form Function
@@ -50,111 +108,54 @@ function emptyForm() {
     postBody.value = "";
 }
 
-// log out
-
-var logout = document.getElementById('logout');
-
-logout.addEventListener('click', e => {
-    localStorage.removeItem("LOGGEDIN")
-    firebase.auth().signOut();
-})
-
-// watch any change of auth
-
-firebase.auth().onAuthStateChanged(firebaseUser => {
-    if (firebaseUser) {
-        console.log(firebaseUser);
-        logout.classList.remove('hide')
-        hidelogin.classList.add('hide')
-
-    } else {
-        console.log(" NOt Logged in")
-        logout.classList.add('hide');
-        hidelogin.classList.remove('hide')
-
-    }
-});
-
-// var test = document.getElementById("test")
-// rootRef.on('value', snap => test.innerText = snap.val());
-
-
-
-// Show Data From Firebase
-const rootRef = firebase.database().ref("issues/");
-rootRef.on("value",
-
-    (snapshot) => {
-        const listtablebody = document.getElementById("recent");
-        listtablebody.textContent = "";
-        snapshot.forEach((child) => {
-            issue = child.val();
-            // console.log(issue)
-
-
-            var post = document.createElement("div")
-            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='edit' onclick='editpost(\"" + child + "\" )'  class='btn btn-info'>Edit</button> <button id='edit' onclick='deletepost(\"" + child.key + "\" )'  class='btn btn-danger'>Delete</button> "
-            listtablebody.append(post)
-        })
-
-    }
-)
-
-
-//edit Function
-
-
-// function showprompt(issueKey) {
-//     var recordRef = firebase.database().ref("issues/" + issueKey.postBody);
-//     console.log(recordRef)
-// }
-
 // Delete Post
 function deletepost(issueKey) {
     if (confirm("are You sure")) {
         var recordRef = firebase.database().ref("issues/" + issueKey);
+        recordRef.remove()
+
     } else {
         return
     }
 
-    recordRef.remove()
+}
+
+//edit Function
+function editpost(issueKey) {
+    thisissueKey = issueKey
+    const rootRef = firebase.database().ref("issues/" + issueKey);
+    rootRef.on("value", (snapshot) => {
+        const listtablebody = document.getElementById("recent");
+        listtablebody.textContent = "";
+        postTitle.value = snapshot.val().PostTitle
+        postBody.value = snapshot.val().postBody
+        postBtn.classList.add('hide')
+        updateBtn.classList.remove('hide')
+    })
 }
 // update
-function editpost(issueKey) {
+updateBtn.addEventListener('click', function() {
+    var userID = localStorage.getItem("UserUID")
+        // console.log(userID)
 
-    var newPostTitle = prompt("enter Post title")
-    var newPostBody = prompt("enter post body")
-
-
-    var recordRef = firebase.database().ref("issues/" + issueKey);
-    console.log(recordRef)
+    var recordRef = firebase.database().ref("issues/" + thisissueKey);
+    // console.log(recordRef)
     recordRef.update({
-        "PostTitle": newPostTitle,
-        "postBody": newPostBody
+        "PostTitle": postTitle.value,
+        "postBody": postBody.value,
+        "userInfo": userID,
     });
 
-    // editIssuekey = issueKey
-    // editIssuekey
-    // console.log(recordRef)
-    // alert('update Key ' + issueKey)
-}
+    thisissueKey = "";
+    postBtn.classList.remove('hide')
+    updateBtn.classList.add('hide')
+    emptyForm();
 
 
-// var recordRef = firebase.database().ref("issues/" + issueKey);
+})
 
-// recordRef.update({
-//     "resolved": "yes"
-// });
 
-// function hidePost(issueKey) {
-//     editIssuekey = issueKey;
 
-//     console.log(editIssuekey)
-// }
-// rootRef.push({
-//     postBody: "Welcome Form my second firebase Post",
-//     PostTitle: "Hello again"
-// });
 
 // ------------------------------------------ Adding Multi language --------------------------------------------
 $(function() {
