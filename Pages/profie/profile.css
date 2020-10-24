@@ -6,6 +6,10 @@ nav img {
     height: 40px;
 }
 
+section {
+    text-align: center;
+}
+
 #footer {
     background-color: #000;
     min-height: 60px;
@@ -55,4 +59,6 @@ p {
 .img1 {
     justify-content: center;
     align-items: center;
+    width: 200px;
+    height: 200px;
 }
