@@ -44,7 +44,6 @@ var arrLang = {
         "COPYRIGHT": "Copyright 2020",
         "NOTHING": "Nothing Is Real",
         "SEARCH": "Search",
-        // "ROTATE": "['Welcome to Fake News', 'This is just for sarcasm']"
         "RECENT": "Recent Posts",
         "HABOUT": "About Us",
         "PABOUT": "We are a site that cares about wrong news and rumors that could destroy an entire nation, so here we are putting all the wrong news and rumors for a better future.",
@@ -64,7 +63,6 @@ var arrLang = {
         "COPYRIGHT": " جميع الحقوق محفوظه",
         "NOTHING": "لا شيء حقيقي",
         "SEARCH": "بحث",
-        // "ROTATE": "['أهلاً في الاخبار المغلوطة', 'أهلاً لاستكشاف الحقيقة']"
         "RECENT": "أخر الأخبار",
         "HABOUT": "اضف الي معلوماتك",
         "PABOUT": "نحن موقع يهتم بالأخبار والإشاعات الخاطئة التي يمكن أن تدمر أمة بأكملها ، لذلك نحن هنا نضع كل الأخبار والإشاعات الخاطئة من أجل مستقبل أفضل",

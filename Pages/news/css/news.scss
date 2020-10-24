@@ -66,6 +66,10 @@ h6 {
     }
 }
 
+textarea {
+    resize: none;
+}
+
 #footer {
     background-color: #000;
     min-height: 60px;
@@ -98,5 +102,14 @@ h6 {
         margin-left: 10px;
         cursor: pointer;
         // background-color: #09c;
+    }
+}
+
+@media (max-width: 720px) {
+    #news {
+        .recent {
+            width: 100%;
+        }
+        // margin-top: 100px;
     }
 }

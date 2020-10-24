@@ -14,6 +14,7 @@
 </head>
 
 <body>
+
     <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
         <div class="container-fluid">
             <a class="navbar-brand" href="../../index.html"><img src="../../assets/imgs/logo-bg.png" alt="logo"></a>
@@ -36,7 +37,7 @@
                         <a class="nav-link" key="LOGOUT" href="" id="logout">Log Out</a>
                     </li>
                     <li class="nav-item dropdown" id="hidelogin">
-                        <a class="nav-link dropdown-toggle" key="JOINUS" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join Us</a>
+                        <a class="nav-link dropdown-toggle lang" key="JOINUS" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join Us</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
                             <a class="dropdown-item lang" key="LOGIN" href="../login/login.html">Login</a>
                             <a class="dropdown-item lang" key="SIGNUP" href="../login/register.html">Sign Up</a>
@@ -56,65 +57,66 @@
             <img src="download.png" alt="login_icon">
             <form action="/action_page.php">
                 <div class="form-group">
-                    <span>
-              <!-- <i style='font-size:24px' class='fas'>&#xf406;</i> -->
-        
-        <input type="username"  class="form-control"  placeholder= "type user name" id="email">
-      </span>
+                    <input type="text" class="form-control" placeholder="type user Email" id="email">
                 </div>
-                <div class="form-group">
 
+                <div class="form-group">
                     <input type="password" class="form-control" placeholder="type password" id="password">
                 </div>
 
-                <span class="form-group form-check">
-             
-                <input class="form-check-input" text-center  type="checkbox"> Remember me
-              </label>
-             <a href="#">Forget your password</a>
-            </span>
-                <br><br>
+                <!-- <span class="form-group form-check"> -->
+
+                <!-- <input class="form-check-input" text-center  type="checkbox">  -->
+                <!-- Remember me -->
+                <!-- <a href="#">Forget your password</a> -->
+                <!-- </span> -->
+                <br>
                 <button type="button" id="login" class="btn btn-success btn-block">login</button>
                 <br>
             </form>
         </div>
-        <!-- ======================================= Footer ======================================= -->
-        <section id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="followUs">
-                            <i class="fab fa-facebook-f "></i>
-                            <i class="fab fa-twitter "></i>
-                            <i class="fab fa-linkedin-in "></i>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="copy">
-                            <span class="lang" Key="COPYRIGHT">Copyright &copy; 2020 </span><a href="https://nothing-real.netlify.app/" target="_blanck">&nbsp; Nothing Real</a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <img src="../news/imgs/iconfinder_United_Kingdom_2361499.png" alt="en" class="translate" id="en">
-                        <img src="../news/imgs/iconfinder_Egypt-Flag_32209.png" alt="egypt" class="translate" id="ar">
+    </div>
+
+
+    <!-- ======================================= Footer ======================================= -->
+
+    <section id="footer" class="fixed-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="followUs">
+                        <i class="fab fa-facebook-f "></i>
+                        <i class="fab fa-twitter "></i>
+                        <i class="fab fa-linkedin-in "></i>
                     </div>
                 </div>
+                <div class="col-4">
+                    <div class="copy">
+                        <span class="lang" Key="COPYRIGHT">Copyright &copy; 2020 </span><a href="https://nothing-real.netlify.app/" target="_blanck">&nbsp; Nothing Real</a>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <img src="../news/imgs/iconfinder_United_Kingdom_2361499.png" alt="en" class="translate" id="en">
+                    <img src="../news/imgs/iconfinder_Egypt-Flag_32209.png" alt="egypt" class="translate" id="ar">
+                </div>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <!-- <script src="js/login.js"></script>
+    <!-- <script src="js/login.js"></script>
         <script src="js/getdata.js"></script> -->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
 
-        <!-- TODO: Add SDKs for Firebase products that you want to use
+    <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-        <script src="login.js"></script>
-        <script>
-        </script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
+    <script src="login.js"></script>
+    <script src="../news/js/Multilang.js"></script>
+    <script>
+    </script>
 
 </body>
 

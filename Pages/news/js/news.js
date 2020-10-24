@@ -25,7 +25,6 @@ firebase.analytics();
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
-        // console.log(firebaseUser);
         localStorage.setItem("UserUID", firebaseUser.uid)
         logout.classList.remove('hide')
         hidelogin.classList.add('hide')
@@ -49,8 +48,6 @@ rootRef.on("value",
         listtablebody.textContent = "";
         snapshot.forEach((child) => {
             issue = child.val();
-
-            // console.log(issue)
             var userInfo = localStorage.getItem("UserUID")
 
             if (userInfo == issue.userInfo) {
@@ -67,18 +64,15 @@ rootRef.on("value",
     }
 )
 
-// <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )' key='DELETE'  class=' delbtn btn btn-danger lang'>Delete</button> 
-//<button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class=' editbtn btn btn-info'>Edit</button> 
 // log out
 
 var logout = document.getElementById('logout');
 
 logout.addEventListener('click', e => {
-        localStorage.removeItem("UserUID")
-        localStorage.removeItem("LOGGEDIN")
-        firebase.auth().signOut();
-    })
-    // console.log(localStorage.getItem("UserEmail"))
+    localStorage.removeItem("UserUID")
+    localStorage.removeItem("LOGGEDIN")
+    firebase.auth().signOut();
+})
 
 //Post Function
 postBtn.addEventListener('click', function() {
@@ -86,7 +80,6 @@ postBtn.addEventListener('click', function() {
     var userloggedin = localStorage.getItem("LOGGEDIN")
     var userInfo = localStorage.getItem("UserUID")
     var userEmail = localStorage.getItem("UserEmail")
-        // console.log(userInfo)
     if (userloggedin) {
         if (postTitle.value != "" && postBody.value != "") {
             rootRef.push({
@@ -147,10 +140,8 @@ cancelBtn.addEventListener('click', () => {
 updateBtn.addEventListener('click', function() {
     var userID = localStorage.getItem("UserUID")
     var userEmail = localStorage.getItem("UserEmail")
-        // console.log(userID)
 
     var recordRef = firebase.database().ref("issues/" + thisissueKey);
-    // console.log(recordRef)
     recordRef.update({
         "PostTitle": postTitle.value,
         "postBody": postBody.value,
@@ -168,3 +159,23 @@ updateBtn.addEventListener('click', function() {
 
 
 })
+
+
+
+
+/*
+                  _  
+   /\     /\/\   |_| 
+__/--\__ /    \  |  \
+
+*/
+
+/*
+
+ <*)
+  ||______
+   (______}
+     |  |
+     ^  ^
+
+*/

@@ -41,7 +41,6 @@ logout.addEventListener('click', e => {
 
 //register 
 regbtn.addEventListener('click', e => {
-
     var rootRef = firebase.database().ref("profiles/");
     var emailinput = email.value;
     var passwordinput = password.value;
@@ -84,3 +83,21 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
     }
 });
+
+
+/*
+                  _  
+   /\     /\/\   |_| 
+__/--\__ /    \  |  \
+
+*/
+
+/*
+
+ <*)
+  ||______
+   (______}
+     |  |
+     ^  ^
+
+*/

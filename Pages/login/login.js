@@ -28,7 +28,6 @@ firebase.analytics();
 
 // Login 
 login.addEventListener('click', function() {
-
     var emailinput = email.value;
     var passwordinput = password.value;
     var auth = firebase.auth()
@@ -46,23 +45,7 @@ logout.addEventListener('click', e => {
 })
 
 
-
-//register 
-// regbtn.addEventListener('click', e => {
-
-//     var emailinput = email.value;
-//     var passwordinput = password.value;
-//     var auth = firebase.auth()
-
-//     var promise = auth.createUserWithEmailAndPassword(emailinput, passwordinput);
-
-//     promise
-//     // .then(user => console.log(user))
-//         .catch(e => console.log(e.message));
-// })
-
 // watch any change of auth
-
 
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
@@ -81,3 +64,23 @@ firebase.auth().onAuthStateChanged(firebaseUser => {
 
     }
 });
+
+
+
+
+/*
+                  _  
+   /\     /\/\   |_| 
+__/--\__ /    \  |  \
+
+*/
+
+/*
+
+ <*)
+  ||______
+   (______}
+     |  |
+     ^  ^
+
+*/
