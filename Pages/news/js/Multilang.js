@@ -46,6 +46,8 @@ var arrLang = {
         "SEARCH": "Search",
         // "ROTATE": "['Welcome to Fake News', 'This is just for sarcasm']"
         "RECENT": "Recent Posts",
+        "UPDATE": "UPDATE",
+        "CANCELUPDATE": "CANCELUPDATE"
     },
     "ar": {
         "HOME": "الرئيسيه",
@@ -62,9 +64,7 @@ var arrLang = {
         "SEARCH": "بحث",
         // "ROTATE": "['أهلاً في الاخبار المغلوطة', 'أهلاً لاستكشاف الحقيقة']"
         "RECENT": "أخر الأخبار",
-
-
-
-
+        "UPDATE": "تعديل",
+        "CANCELUPDATE": "الغاء"
     }
 }

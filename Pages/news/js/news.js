@@ -55,18 +55,20 @@ rootRef.on("value",
 
             if (userInfo == issue.userInfo) {
                 var post = document.createElement("div")
-                post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class=' editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class=' delbtn btn btn-danger'>Delete</button> "
+                post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5>  <i id='editbtn' class='fas fa-pen-square text-info fa-2x editbtn' onclick='editpost(\"" + child.key + "\" )'></i> <i class='fas fa-trash-alt text-danger fa-2x delbtn' id='delbtn' onclick='deletepost(\"" + child.key + "\" )'></i>"
                 listtablebody.append(post)
 
             } else {
                 var post = document.createElement("div")
-                post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class='hide editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class='hide delbtn btn btn-danger'>Delete</button> "
+                post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5>  "
                 listtablebody.append(post)
             }
         })
     }
 )
 
+// <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )' key='DELETE'  class=' delbtn btn btn-danger lang'>Delete</button> 
+//<button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class=' editbtn btn btn-info'>Edit</button> 
 // log out
 
 var logout = document.getElementById('logout');

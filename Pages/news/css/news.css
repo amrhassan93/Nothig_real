@@ -50,6 +50,12 @@ h6 {
           box-shadow: 0px 0px 10px #31A2B7;
 }
 
+#news i {
+  padding: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
 #recent div {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   padding: 10px;
