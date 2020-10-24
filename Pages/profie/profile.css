@@ -2,6 +2,10 @@ nav {
     background-color: #31A2B7 !important;
 }
 
+section {
+    text-align: center;
+}
+
 #footer {
     background-color: #000;
     min-height: 60px;
@@ -43,24 +47,14 @@ nav {
     cursor: pointer;
 }
 
-p{
-
-text-align: center;
-font-size: larger;
-
+p {
+    text-align: center;
+    font-size: larger;
 }
-.img1{
 
+.img1 {
     justify-content: center;
     align-items: center;
-
-
-
-
+    width: 200px;
+    height: 200px;
 }
-
-
-
-   
-
-
