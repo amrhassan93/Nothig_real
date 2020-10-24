@@ -2,6 +2,7 @@ var postBtn = document.getElementById("postNow")
 var postTitle = document.getElementById("posttitle")
 var postBody = document.getElementById("postbody")
 var updateBtn = document.getElementById('updateBtn')
+var cancelBtn = document.getElementById('cancelBtn')
 
 var thisissueKey;
 
@@ -118,7 +119,6 @@ function deletepost(issueKey) {
     } else {
         return
     }
-
 }
 
 //edit Function
@@ -132,14 +132,20 @@ function editpost(issueKey) {
         postBody.value = snapshot.val().postBody
         postBtn.classList.add('hide')
         updateBtn.classList.remove('hide')
+        cancelBtn.classList.remove('hide')
+
     })
 }
 // update
+
+cancelBtn.addEventListener('click', () => {
+    location.reload();
+})
+
 updateBtn.addEventListener('click', function() {
     var userID = localStorage.getItem("UserUID")
     var userEmail = localStorage.getItem("UserEmail")
-
-    // console.log(userID)
+        // console.log(userID)
 
     var recordRef = firebase.database().ref("issues/" + thisissueKey);
     // console.log(recordRef)
@@ -147,7 +153,7 @@ updateBtn.addEventListener('click', function() {
         "PostTitle": postTitle.value,
         "postBody": postBody.value,
         "userInfo": userID,
-        "userEmail": userEmail.value
+        "userEmail": userEmail
 
     });
 
