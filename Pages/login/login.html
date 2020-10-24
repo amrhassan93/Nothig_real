@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Login</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -13,34 +13,50 @@
 
 </head>
 
+<script>
+    function validate(email, psw){
+let validornot = true;
+if(checkEmail(email)){
+__('email-error').innerText = ""        
+}else{
+__('email-error').innerText = "*please enter a valid email address."
+validornot = false;
+}
+if(checkPassword(psw)){
+__('password-error').innerText = "";
+}else{
+__('password-error').innerText = "*Password must be greather than 8 character and contains at least one special character @!#$%^&*()"
+validornot = false;
+}
+return validornot;
+
+}
+    
+</script>
 <body>
+  <div class="row">
+    <div class="col-sm-12">.col-sm-12</div>
+
     <nav class="navbar navbar-expand-sm navbar-dark  fixed-top">
         <div class="container-fluid">
-            <a class="navbar-brand" href="../../index.html"><img src="../../assets/imgs/logo-bg.png" alt="logo"></a>
+            <a class="navbar-brand" href="#">Navbar</a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
+        <span class="navbar-toggler-icon"></span>
+    </button>
             <div class="collapse navbar-collapse" id="collapsibleNavId">
                 <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link lang" key="HOME" href="../../index.html">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="../../index.html"> Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link lang" key="NEWS" href="../news/news.html">News</a>
+                        <a class="nav-link" href="Pages/news/news.html">Link</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link lang" key="PROFILE" href="../profie/profile.html">Profile</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" key="LOGOUT" href="" id="logout">Log Out</a>
-                    </li>
-                    <li class="nav-item dropdown" id="hidelogin">
-                        <a class="nav-link dropdown-toggle" key="JOINUS" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Join Us</a>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="dropdownId" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Dropdown</a>
                         <div class="dropdown-menu" aria-labelledby="dropdownId">
-                            <a class="dropdown-item lang" key="LOGIN" href="../login/login.html">Login</a>
-                            <a class="dropdown-item lang" key="SIGNUP" href="../login/register.html">Sign Up</a>
-                        </div>
+                            <a class="dropdown-item" href="#">Action 1</a>
+                            <a class="dropdown-item" href="#">Action 2</a>
+                 </div>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -50,7 +66,6 @@
             </div>
         </div>
     </nav>
-
     <div class="container">
         <div class="form">
             <img src="download.png" alt="login_icon">
@@ -59,62 +74,37 @@
                     <span>
               <!-- <i style='font-size:24px' class='fas'>&#xf406;</i> -->
         
-        <input type="username"  class="form-control"  placeholder= "type user name" id="email">
+        <input type="username"  class="form-control"  placeholder= "type user name" id="username">
       </span>
                 </div>
                 <div class="form-group">
 
                     <input type="password" class="form-control" placeholder="type password" id="password">
                 </div>
-
+ 
                 <span class="form-group form-check">
              
                 <input class="form-check-input" text-center  type="checkbox"> Remember me
               </label>
+
+
+              
+
+
              <a href="#">Forget your password</a>
+             
+              
+             
             </span>
+
                 <br><br>
-                <button type="button" id="login" class="btn btn-success btn-block">login</button>
+                <button type="button" class="btn btn-success btn-block">login</button>
                 <br>
+
+
+
             </form>
-        </div>
-        <!-- ======================================= Footer ======================================= -->
-        <section id="footer">
-            <div class="container">
-                <div class="row">
-                    <div class="col-4">
-                        <div class="followUs">
-                            <i class="fab fa-facebook-f "></i>
-                            <i class="fab fa-twitter "></i>
-                            <i class="fab fa-linkedin-in "></i>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <div class="copy">
-                            <span class="lang" Key="COPYRIGHT">Copyright &copy; 2020 </span><a href="https://nothing-real.netlify.app/" target="_blanck">&nbsp; Nothing Real</a>
-                        </div>
-                    </div>
-                    <div class="col-4">
-                        <img src="../news/imgs/iconfinder_United_Kingdom_2361499.png" alt="en" class="translate" id="en">
-                        <img src="../news/imgs/iconfinder_Egypt-Flag_32209.png" alt="egypt" class="translate" id="ar">
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- <script src="js/login.js"></script>
-        <script src="js/getdata.js"></script> -->
-        <!-- The core Firebase JS SDK is always required and must be listed first -->
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-app.js"></script>
-
-        <!-- TODO: Add SDKs for Firebase products that you want to use
-        https://firebase.google.com/docs/web/setup#available-libraries -->
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-analytics.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-database.js"></script>
-        <script src="https://www.gstatic.com/firebasejs/7.24.0/firebase-auth.js"></script>
-        <script src="login.js"></script>
-        <script>
-        </script>
+         
 
 </body>
 
