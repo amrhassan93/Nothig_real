@@ -37,11 +37,12 @@ rootRef.on("value",
         listtablebody.textContent = "";
         snapshot.forEach((child) => {
             issue = child.val();
-            // console.log(issue)
+            console.log(issue.userEmail)
+
 
 
             var post = document.createElement("div")
-            post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5>"
+            post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5>"
             listtablebody.append(post)
         })
 

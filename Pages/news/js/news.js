@@ -54,14 +54,12 @@ rootRef.on("value",
 
             if (userInfo == issue.userInfo) {
                 var post = document.createElement("div")
-                post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class=' editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class=' delbtn btn btn-danger'>Delete</button> "
+                post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class=' editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class=' delbtn btn btn-danger'>Delete</button> "
                 listtablebody.append(post)
 
             } else {
                 var post = document.createElement("div")
-                post.innerHTML = "<h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class='hide editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class='hide delbtn btn btn-danger'>Delete</button> "
-
-
+                post.innerHTML = "<h6>" + issue.userEmail + "</h6> <h3 class='p-2'>" + issue.PostTitle + "</h3> <h5 class='p-2'>" + issue.postBody + "</h5> <button id='editbtn' onclick='editpost(\"" + child.key + "\" )'  class='hide editbtn btn btn-info'>Edit</button> <button id='delbtn' onclick='deletepost(\"" + child.key + "\" )'  class='hide delbtn btn btn-danger'>Delete</button> "
                 listtablebody.append(post)
             }
         })
@@ -73,23 +71,26 @@ rootRef.on("value",
 var logout = document.getElementById('logout');
 
 logout.addEventListener('click', e => {
-    localStorage.removeItem("UserUID")
-    localStorage.removeItem("LOGGEDIN")
-    firebase.auth().signOut();
-})
+        localStorage.removeItem("UserUID")
+        localStorage.removeItem("LOGGEDIN")
+        firebase.auth().signOut();
+    })
+    // console.log(localStorage.getItem("UserEmail"))
 
 //Post Function
 postBtn.addEventListener('click', function() {
 
     var userloggedin = localStorage.getItem("LOGGEDIN")
     var userInfo = localStorage.getItem("UserUID")
+    var userEmail = localStorage.getItem("UserEmail")
         // console.log(userInfo)
     if (userloggedin) {
         if (postTitle.value != "" && postBody.value != "") {
             rootRef.push({
                 userInfo: userInfo,
                 PostTitle: postTitle.value,
-                postBody: postBody.value
+                postBody: postBody.value,
+                userEmail: userEmail
             });
             emptyForm();
         } else {
@@ -136,7 +137,9 @@ function editpost(issueKey) {
 // update
 updateBtn.addEventListener('click', function() {
     var userID = localStorage.getItem("UserUID")
-        // console.log(userID)
+    var userEmail = localStorage.getItem("UserEmail")
+
+    // console.log(userID)
 
     var recordRef = firebase.database().ref("issues/" + thisissueKey);
     // console.log(recordRef)
@@ -144,6 +147,8 @@ updateBtn.addEventListener('click', function() {
         "PostTitle": postTitle.value,
         "postBody": postBody.value,
         "userInfo": userID,
+        "userEmail": userEmail.value
+
     });
 
     thisissueKey = "";

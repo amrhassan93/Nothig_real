@@ -67,11 +67,12 @@ logout.addEventListener('click', e => {
 firebase.auth().onAuthStateChanged(firebaseUser => {
     if (firebaseUser) {
         console.log(firebaseUser);
-        localStorage.setItem("UserUID", firebaseUser.uid)
+        localStorage.setItem("UserUID", firebaseUser.uid);
+        localStorage.setItem("UserEmail", firebaseUser.email)
         localStorage.setItem("LOGGEDIN", "You Are Logged In")
         logout.classList.remove('hide')
         hidelogin.classList.add('hide');
-        window.location.replace("https://nothing-real.netlify.app/index.html");
+        window.location.replace("http://127.0.0.1:5500/index.html");
 
     } else {
         console.log(" NOt Logged in")
