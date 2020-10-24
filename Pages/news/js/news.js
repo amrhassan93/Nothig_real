@@ -94,8 +94,7 @@ postBtn.addEventListener('click', function() {
         }
     } else {
         alert("You should login first")
-        window.location.href = "http://127.0.0.1:5500/Pages/login/register.html"
-
+        window.location.href = "https://nothing-real.netlify.app/pages/login/register.html"
     }
 })
 
