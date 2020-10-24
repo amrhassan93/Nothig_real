@@ -156,3 +156,18 @@ header {
         text-shadow: 0px 0px 20px #31A2B7;
     }
 }
+
+//about section
+#about {
+    background-color: black;
+    padding: 30px;
+    margin-top: 5px;
+    h1 {
+        color: white;
+        text-align: center;
+    }
+    p {
+        color: white;
+        font-size: 22px;
+    }
+}

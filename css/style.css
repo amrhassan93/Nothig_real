@@ -148,4 +148,20 @@ header .ityped-cursor {
   text-align: center;
   text-shadow: 0px 0px 20px #31A2B7;
 }
+
+#about {
+  background-color: black;
+  padding: 30px;
+  margin-top: 5px;
+}
+
+#about h1 {
+  color: white;
+  text-align: center;
+}
+
+#about p {
+  color: white;
+  font-size: 22px;
+}
 /*# sourceMappingURL=style.css.map */
