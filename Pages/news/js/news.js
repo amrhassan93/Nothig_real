@@ -162,6 +162,8 @@ updateBtn.addEventListener('click', function() {
     thisissueKey = "";
     postBtn.classList.remove('hide')
     updateBtn.classList.add('hide')
+    cancelBtn.classList.add('hide')
+
     emptyForm();
 
 
