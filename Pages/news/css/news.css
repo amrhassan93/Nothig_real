@@ -35,6 +35,8 @@ h6 {
 #news {
   min-height: 100vh;
   padding: 25px;
+  font-family: "Lobster", cursive;
+  background-color: #EFEFEF;
 }
 
 #news h3 {
