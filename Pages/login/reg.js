@@ -34,6 +34,7 @@ firebase.analytics();
 // log out
 logout.addEventListener('click', e => {
     localStorage.removeItem("UserUID")
+    localStorage.removeItem("LOGGEDIN")
     firebase.auth().signOut();
 })
 
