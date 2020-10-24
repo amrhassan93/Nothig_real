@@ -48,6 +48,8 @@ var arrLang = {
         "RECENT": "Recent Posts",
         "HABOUT": "About Us",
         "PABOUT": "We are a site that cares about wrong news and rumors that could destroy an entire nation, so here we are putting all the wrong news and rumors for a better future.",
+        "UPDATE": "UPDATE",
+        "CANCELUPDATE": "CANCELUPDATE"
     },
     "ar": {
         "HOME": "الرئيسيه",
@@ -65,10 +67,8 @@ var arrLang = {
         // "ROTATE": "['أهلاً في الاخبار المغلوطة', 'أهلاً لاستكشاف الحقيقة']"
         "RECENT": "أخر الأخبار",
         "HABOUT": "اضف الي معلوماتك",
-        "PABOUT": "نحن موقع يهتم بالأخبار والإشاعات الخاطئة التي يمكن أن تدمر أمة بأكملها ، لذلك نحن هنا نضع كل الأخبار والإشاعات الخاطئة من أجل مستقبل أفضل"
-
-
-
-
+        "PABOUT": "نحن موقع يهتم بالأخبار والإشاعات الخاطئة التي يمكن أن تدمر أمة بأكملها ، لذلك نحن هنا نضع كل الأخبار والإشاعات الخاطئة من أجل مستقبل أفضل",
+        "UPDATE": "تعديل",
+        "CANCELUPDATE": "الغاء"
     }
 }

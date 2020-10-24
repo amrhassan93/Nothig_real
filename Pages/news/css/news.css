@@ -1,26 +1,26 @@
 .hide {
-  display: none;
+    display: none;
 }
 
 nav img {
-  height: 40px;
+    height: 40px;
 }
 
 nav {
-  background-color: #31A2B7 !important;
+    background-color: #31A2B7 !important;
 }
 
 nav #ar,
 nav #en {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  padding: 5px;
-  cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    cursor: pointer;
 }
 
 nav .dropdown-menu {
-  text-align: center;
+    text-align: center;
 }
 
 h1,
@@ -29,80 +29,88 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Lobster", cursive;
+    font-family: "Lobster", cursive;
 }
 
 #news {
-  min-height: 100vh;
-  padding: 25px;
-  font-family: "Lobster", cursive;
-  background-color: #EFEFEF;
+    min-height: 100vh;
+    padding: 25px;
+    font-family: "Lobster", cursive;
+    background-color: #EFEFEF;
 }
 
 #news h3 {
-  text-align: center;
-  margin: 20px;
+    text-align: center;
+    margin: 20px;
 }
 
 #news .recent {
-  height: 80vh;
-  max-height: 80vh;
-  overflow: auto;
-  -webkit-box-shadow: 0px 0px 10px #31A2B7;
-          box-shadow: 0px 0px 10px #31A2B7;
+    height: 80vh;
+    max-height: 80vh;
+    overflow: auto;
+    -webkit-box-shadow: 0px 0px 10px #31A2B7;
+    box-shadow: 0px 0px 10px #31A2B7;
+}
+
+#news i {
+    padding: 5px;
+    font-size: 22px;
+    cursor: pointer;
 }
 
 #recent div {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  padding: 10px;
-  border: 1px solid #31A2B7;
-  margin: 15px;
-  border-radius: 10px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px;
+    border: 1px solid #31A2B7;
+    margin: 15px;
+    border-radius: 10px;
 }
 
 #recent div h3 {
-  text-align: center;
-  text-shadow: 0px 0px 20px #31A2B7;
+    text-align: center;
+    text-shadow: 0px 0px 20px #31A2B7;
 }
 
 #footer {
-  background-color: #000;
-  min-height: 60px;
-  color: #fff;
-  text-align: center;
+    background-color: #000;
+    min-height: 60px;
+    color: #fff;
+    text-align: center;
 }
 
 #footer .followUs i {
-  padding: 5px;
-  margin: 5px;
-  -webkit-transition: all;
-  transition: all;
-  -webkit-transition-duration: .25s;
-          transition-duration: .25s;
-  margin-top: 12px;
-  font-size: 20px;
+    padding: 5px;
+    margin: 5px;
+    -webkit-transition: all;
+    transition: all;
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+    margin-top: 12px;
+    font-size: 20px;
 }
 
 #footer .followUs i:hover {
-  color: #31A2B7;
+    color: #31A2B7;
 }
 
 #footer .copy {
-  margin-top: 12px;
+    margin-top: 12px;
 }
 
 #footer a {
-  color: #fff;
-  text-decoration: none;
+    color: #fff;
+    text-decoration: none;
 }
 
 #footer #ar,
 #footer #en {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  padding: 5px;
-  margin-left: 10px;
-  cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    padding: 5px;
+    margin-left: 10px;
+    cursor: pointer;
 }
+
+
 /*# sourceMappingURL=news.css.map */
